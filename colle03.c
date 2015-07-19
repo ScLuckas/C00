@@ -6,7 +6,7 @@
 /*   By: sganon <sganon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/11 16:37:17 by sganon            #+#    #+#             */
-/*   Updated: 2015/07/13 13:06:21 by lscariot         ###   ########.fr       */
+/*   Updated: 2015/07/12 19:53:10 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ void	ft_nputchar(char c, int n)
 
 int		ft_head(int x)
 {
-	ft_putchar('/');
+	ft_putchar('A');
 	if (x != 1)
 	{
-		ft_nputchar('*', x - 2);
-		ft_putchar('\\');
+		ft_nputchar('B', x - 2);
+		ft_putchar('C');
 	}
 	ft_putchar('\n');
 	return (0);
@@ -40,11 +40,11 @@ int		ft_tail(int x, int y)
 {
 	if (y > 1)
 	{
-		ft_putchar('\\');
+		ft_putchar('A');
 		if (x > 1)
 		{
-			ft_nputchar('*', x - 2);
-			ft_putchar('/');
+			ft_nputchar('B', x - 2);
+			ft_putchar('C');
 		}
 		ft_putchar('\n');
 	}
@@ -61,11 +61,11 @@ int		colle(int x, int y)
 		ft_head(x);
 		while (y - 2 > ct)
 		{
-			ft_putchar('*');
+			ft_putchar('B');
 			if (x != 1)
 			{
 				ft_nputchar(' ', x - 2);
-				ft_putchar('*');
+				ft_putchar('B');
 			}
 			ft_putchar('\n');
 			ct++;
